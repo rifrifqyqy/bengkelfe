@@ -12,9 +12,9 @@
         class="grid justify-items-center gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         <CardTravel
-          v-for="(item, index) in data"
+          v-for="(item, index) in prods"
           :key="index"
-          :image="`https://8744-110-138-93-77.ngrok-free.app/bengkelbe/${item.image.file_path}`"
+          :image="`http://localhost:8080/bengkelbe/${item.image.file_path}`"
           :title="item.produk_name"
           :desc="item.description"
           :rating="4.8"
@@ -28,13 +28,16 @@
 </template>
 
 <script setup>
-const apiUrl = "https://8744-110-138-93-77.ngrok-free.app/bengkelbe/dataproduk";
-const { pending, data, error } = await useFetch(apiUrl, {
-  lazy: false,
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-  },
+const apiUrl = "http://localhost:8080/bengkelbe/dataproduk";
+const {
+  pending,
+  data: prods,
+  error,
+} = await useFetch(apiUrl, {
+  lazy: true,
+  retry: true,
 });
+
 useHead({
   title: "TouTour | Destinasi",
   meta: [{ name: "description", content: "Destinasi Wisata" }],
