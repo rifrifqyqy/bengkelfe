@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-const apiUrl = "http://localhost:8080/bengkelbe/dataproduk";
+const apiUrl = "https://8744-110-138-93-77.ngrok-free.app/bengkelbe/dataproduk";
 const { data, error } = await useFetch(apiUrl);
 useHead({
   title: "TouTour | Destinasi",
