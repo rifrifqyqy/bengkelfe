@@ -36,12 +36,12 @@
           MONRO motoclub and autoservices
         </h1>
         <p class="text-dark-200">
-          Monro Motoclub adalah bengkel otomotif terpercaya yang telah
-          melayani pelanggan dengan perbaikan dan perawatan kendaraan
-          berkualitas selama bertahun-tahun. Terletak di lokasi strategis, Monro
-          Motoclub menawarkan berbagai layanan, mulai dari perawatan rutin
-          hingga perbaikan kompleks untuk semua jenis kendaraan, termasuk mobil
-          dan truk.
+          Monro Motoclub adalah bengkel otomotif terpercaya yang telah melayani
+          pelanggan dengan perbaikan dan perawatan kendaraan berkualitas selama
+          bertahun-tahun. Terletak di lokasi strategis, Monro Motoclub
+          menawarkan berbagai layanan, mulai dari perawatan rutin hingga
+          perbaikan kompleks untuk semua jenis kendaraan, termasuk mobil dan
+          truk.
         </p>
         <ButtonPrimary
           to="/produk"
@@ -122,6 +122,7 @@ const { data, error } = await useFetch(apiUrl);
 if (error.value) {
   console.error("Error fetching data:", error.value);
 }
+console.log(data);
 </script>
 
 <style scoped>
