@@ -117,8 +117,8 @@ const marqueeimg = [
   },
 ];
 
-const apiUrl = "https://8744-110-138-93-77.ngrok-free.app/bengkelbe/dataproduk";
-const { pending, data, error } = await useFetch(apiUrl, { lazy: true });
+const apiUrl = "http://localhost:8080/bengkelbe/dataproduk";
+const { pending, data, error } = await useFetch(apiUrl, { lazy: false });
 if (error.value) {
   console.error("Error fetching data:", error.value);
 }
