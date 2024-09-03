@@ -71,6 +71,7 @@
           :to="`/produk/${item.id}`"
         />
       </div>
+      {{ data }}
     </section>
 
     <section class="mt-16 flex flex-col gap-8">
@@ -117,8 +118,12 @@ const marqueeimg = [
   },
 ];
 
-const apiUrl = "http://localhost:8080/bengkelbe/dataproduk";
-const { pending, data, error } = await useFetch(apiUrl, { lazy: false });
+const apiUrl = "https://8744-110-138-93-77.ngrok-free.app/bengkelbe/dataproduk";
+const { pending, data, error } = await useFetch(apiUrl, {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+  },
+});
 if (error.value) {
   console.error("Error fetching data:", error.value);
 }
