@@ -6,7 +6,7 @@
         Berbagai produk dan layanan di MONRO autoservices
       </p>
     </div>
-    <p v-if="pending">Loading</p>
+    <p v-if="pending">Loading...</p>
     <template v-else class="">
       <div
         class="grid justify-items-center gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
@@ -14,7 +14,7 @@
         <CardTravel
           v-for="(item, index) in data"
           :key="index"
-          :image="``"
+          :image="`https://8744-110-138-93-77.ngrok-free.app/bengkelbe/${item.image.file_path}`"
           :title="item.produk_name"
           :desc="item.description"
           :rating="4.8"

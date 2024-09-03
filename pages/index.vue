@@ -57,7 +57,8 @@
           Berbagai produk dan layanan di MONRO autoservices
         </p>
       </div>
-      <div class="flex flex-wrap justify-evenly gap-4">
+      <p v-if="pending">Loading...</p>
+      <div class="flex flex-wrap justify-evenly gap-4" v-else>
         <CardTravel
           v-for="(item, index) in data.slice(0, 4)"
           :key="index"
@@ -117,8 +118,7 @@ const marqueeimg = [
 ];
 
 const apiUrl = "https://8744-110-138-93-77.ngrok-free.app/bengkelbe/dataproduk";
-// fetch data langsung
-const { data, error } = await useFetch(apiUrl);
+const { pending, data, error } = await useFetch(apiUrl, { lazy: true });
 if (error.value) {
   console.error("Error fetching data:", error.value);
 }
