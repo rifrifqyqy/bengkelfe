@@ -30,7 +30,7 @@
     </section>
 
     <div v-if="showButton" class="footer">
-      <NuxtLink :to="to" class="w-full">
+      <NuxtLink to="to" class="w-full">
         <ButtonPrimary styled="bg-mainn-50 rounded-md">
           Lihat Detail
         </ButtonPrimary>

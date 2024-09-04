@@ -62,8 +62,8 @@
         <CardTravel
           v-for="(item, index) in data.slice(0, 4)"
           :key="index"
-          :image="`http://localhost:8080/bengkelbe/${item.image.file_path}`"
-          :title="item.produk_name"
+          :image="item.image"
+          :title="item.title"
           :desc="item.description"
           :rating="4.8"
           :price="formatRupiah(item.price)"
@@ -117,7 +117,7 @@ const marqueeimg = [
   },
 ];
 
-const apiUrl = "http://localhost:8080/bengkelbe/dataproduk";
+const apiUrl = "https://fakestoreapi.com/products";
 const { pending, data, error } = await useFetch(apiUrl, { 
   retry: true,
  });
@@ -137,7 +137,7 @@ nav {
   @apply w-max border-b-[3px] border-transparent px-12 py-6 hover:border-green-600 max-md:px-4 max-md:text-[12px];
 }
 .styled.h1 {
-  @apply text-center text-3xl font-bold text-yellow-500 max-sm:text-xl;
+  @apply text-center text-[42px] font-semibold text-yellow-500 max-sm:text-xl;
 
   span {
     @apply italic;

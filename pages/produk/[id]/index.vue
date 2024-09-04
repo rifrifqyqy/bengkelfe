@@ -24,7 +24,7 @@
           </p>
         </section>
         <div class="flex flex-col gap-4">
-          <h1 class="text-[24px] font-semibold uppercase">Spesifikasi</h1>
+          <h1 class="text-[24px] font-semibold uppercase">Spesifikasi Produk</h1>
           <section class="facility-wrapper">
             <div v-for="fac in facilityData" :key="fac.id">
               <div class="label">

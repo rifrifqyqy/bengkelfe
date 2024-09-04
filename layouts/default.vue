@@ -94,21 +94,11 @@
         </div>
 
         <div class="flex flex-col gap-4 max-sm:mt-4">
-          <h1 class="text-xl max-sm:text-[16px]">Stay Connected</h1>
-          <form action="" method="post" class="flex w-fit">
-            <input
-              type="email"
-              name=""
-              id=""
-              placeholder="enter your email address"
-              class="px-4 py-3 text-green-600 max-sm:text-[14px]"
-            />
-            <buttonPrimary
-              styled="rounded-none bg-mainn-100 p-0 h-full w-max flex p-2"
-            >
-              <img src="/images/Send.svg" alt="" class="h-full w-full" />
-            </buttonPrimary>
-          </form>
+          <h1 class="text-xl max-sm:text-[16px]">Contact Us</h1>
+          <div class="flex flex-col gap-4">
+            <p>email : monro.autoservices@business.com</p>
+            <p>phone : +62812882222</p>
+          </div>
         </div>
       </section>
 

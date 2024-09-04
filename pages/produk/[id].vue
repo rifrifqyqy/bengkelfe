@@ -19,8 +19,8 @@ const desdata = data.value.find((destination) => destination.id === id);
 
 
 useHead({
-  title: `TouTour | ${desdata.produk_name}`,
-  meta: [{ name: "description", content: "Destinasi Wisata" }],
+  title: `MONRO | ${desdata.produk_name}`,
+  meta: [{ name: "description", content: "Produk Spareparts" }],
 });
 </script>
 

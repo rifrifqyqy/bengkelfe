@@ -37,7 +37,6 @@
 const items = [
   {
     label: " Apa saja layanan yang ditawarkan oleh Monro MotoClub?",
-
     content:
       "Monro MotoClub menawarkan berbagai layanan perawatan dan perbaikan motor, termasuk servis berkala, perbaikan mesin, penggantian oli, perbaikan rem, dan banyak lagi. Kami juga menjual berbagai sparepart asli dan berkualitas tinggi untuk semua jenis motor.",
   },
