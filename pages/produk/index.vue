@@ -30,7 +30,7 @@
         <CardTravel
           v-for="(item, index) in prods"
           :key="index"
-          :image="item.image"
+          :image="`https://porto-management-rifqy.vercel.app/${item.imageUrl}`"
           :title="item.title"
           :desc="item.description"
           :rating="4.8"
@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-const apiUrl = "https://fakestoreapi.com/products";
+const apiUrl = "https://porto-management-rifqy.vercel.app/api/porto";
 const {
   pending,
   data: prods,

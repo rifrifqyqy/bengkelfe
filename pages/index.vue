@@ -62,7 +62,7 @@
         <CardTravel
           v-for="(item, index) in data.slice(0, 4)"
           :key="index"
-          :image="item.image"
+          :image="`https://porto-management-rifqy.vercel.app/${item.imageUrl}`"
           :title="item.title"
           :desc="item.description"
           :rating="4.8"
@@ -117,7 +117,7 @@ const marqueeimg = [
   },
 ];
 
-const apiUrl = "https://fakestoreapi.com/products";
+const apiUrl = "https://porto-management-rifqy.vercel.app/api/porto";
 const { pending, data, error } = await useFetch(apiUrl, { 
   retry: true,
  });
