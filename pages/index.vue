@@ -57,13 +57,13 @@
           Berbagai produk dan layanan di MONRO autoservices
         </p>
       </div>
-      <p v-if="pending">
+      <div v-if="pending" class="flex flex-wrap justify-evenly gap-4">
         <CardTravelSkeleton
           v-for="(item, index) in data.slice(0, 4)"
           :key="index"
           image="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
         />
-      </p>
+      </div>
       <div class="flex flex-wrap justify-evenly gap-4" v-else>
         <CardTravel
           v-for="(item, index) in data.slice(0, 4)"
