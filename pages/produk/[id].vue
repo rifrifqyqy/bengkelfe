@@ -8,13 +8,13 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 
 const id = Number(route.params.id);
-const apiUrl = "http://localhost:8080/bengkelbe/dataproduk";
+const apiUrl = "https://porto-management-rifqy.vercel.app/api/porto";
 const { data, error } = await useFetch(apiUrl);
 
 if (error.value) {
   console.error("Error fetching data:", error.value);
 }
-const desdata = data.value.find((destination) => destination.id === id);
+const desdata = data.value.find((item) => item.id === id);
 
 
 

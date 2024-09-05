@@ -57,7 +57,13 @@
           Berbagai produk dan layanan di MONRO autoservices
         </p>
       </div>
-      <p v-if="pending">Loading...</p>
+      <p v-if="pending">
+        <CardTravelSkeleton
+          v-for="(item, index) in data.slice(0, 4)"
+          :key="index"
+          image="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
+        />
+      </p>
       <div class="flex flex-wrap justify-evenly gap-4" v-else>
         <CardTravel
           v-for="(item, index) in data.slice(0, 4)"
@@ -68,7 +74,7 @@
           :rating="4.8"
           :price="formatRupiah(item.price)"
           :maps="item.maps"
-          :to="`/produk/${item.id}`"
+          :to="`/produk/${item._id}`"
         />
       </div>
     </section>
@@ -118,12 +124,11 @@ const marqueeimg = [
 ];
 
 const apiUrl = "https://porto-management-rifqy.vercel.app/api/porto";
-const { pending, data, error } = await useFetch(apiUrl, { 
+const { pending, data, error } = await useFetch(apiUrl, {
+  lazy: true,
   retry: true,
- });
-if (error.value) {
-  console.error("Error fetching data:", error.value);
-}
+});
+
 console.log(data);
 </script>
 

@@ -76,7 +76,7 @@
         :gradient="true"
         gradient-color="#f7f7f7"
         auto-fill
-        class="flex my-8"
+        class="my-8 flex"
         :loop="0"
       >
         <div v-for="sponsor in marqueeimg" :key="sponsor.id" class="mx-8">
@@ -88,6 +88,9 @@
         </div>
       </NuxtMarquee>
     </section>
+    <CardTravelSkeleton
+      image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWN8hLKJungcUipWLReON9fse4yZcyB0rzNw&s"
+    />
   </main>
 </template>
 

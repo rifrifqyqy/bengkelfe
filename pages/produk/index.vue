@@ -10,16 +10,10 @@
       <div
         class="grid justify-items-center gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
-        <CardTravel
+        <CardTravelSkeleton
           v-for="(item, index) in prods"
-          :key="index"
-          :image="`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWN8hLKJungcUipWLReON9fse4yZcyB0rzNw&s`"
-          :title="`Loading...`"
-          :desc="`Loading...`"
-          :rating="`Loading...`"
-          :price="`Loading...`"
-          :maps="`Loading...`"
-          :to="`Loading...`"
+          image="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
+          
         />
       </div>
     </p>
